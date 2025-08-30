@@ -1,0 +1,28 @@
+{
+  "name": "flavor-table",
+  "version": "1.0.0",
+  "description": "FIND RECIPES BY INGREDIENTS USING",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariam-shkukani/Flavor-Table.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mariam-shkukani/Flavor-Table/issues"
+  },
+  "homepage": "https://github.com/mariam-shkukani/Flavor-Table#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
