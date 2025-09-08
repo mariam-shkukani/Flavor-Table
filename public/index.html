@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flavor Table — Search</title>
-  <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavor Table</title>
+  <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body data-page="search">
   <div class="container">
-    <nav>
-      <div><a href="https://images.unsplash.com/photo-1705909212738-b1d638cb892a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZvcmslMjBhbmQlMjBrbmlmZXxlbnwwfHwwfHx8MA%3D%3D">🍽️ Flavor Table</a></div>
+  <nav>
+    <div><a href="https://images.unsplash.com/photo-1705909212738-b1d638cb892a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZvcmslMjBhbmQlMjBrbmlmZXxlbnwwfHwwfHx8MA%3D%3D">🍽️ Flavor Table</a></div>
       <div>
-        <a href="./index.html">Search</a>
-        <a href="./randomRecipes.html">Random</a>
-        <a href="./favorites.html">Favorites</a>
-      </div>
-    </nav>
-
-    <h1>Find Recipes by Ingredients</h1>
-    <div class="search-bar">
-      <input id="ingredientsInput" type="text" placeholder="e.g. chicken, rice, tomato" />
-      <button id="searchBtn">Search</button>
+    <a href="./index.html">Search </a>
+    <a href="./randomRecipes.html">Random </a>
+    <a href="./favorites.html">Favorites</a>
     </div>
+  </nav>
 
-    <div id="messages"></div>
+  <h1>Flavor Table</h1>
+  <div class="search-bar">
+  <input type="text" id="ingredients" placeholder="Enter ingredients ( e.g. chicken, rice, tomato)" />
+  <button id="searchBtn">Search</button>
+</div>
+  <div id="messages"></div>
     <div id="results" class="grid"></div>
-<br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<br>
     <footer>Built By MARIAM SHKUKANI ❤️  </footer>
   </div>
-  <script src="./app.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
