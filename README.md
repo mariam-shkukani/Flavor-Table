@@ -27,9 +27,14 @@ Search and explore recipes by ingredients using a Node/Express backend that prox
 ## Questions
 
 - How many hours did it take you to complete this assignment?
-  - From 6-8 hours
+  - From 9-12 hours
 - Were there any parts of the lab you found challenging?
   - The hardest part was understandimg the connection between the Backend and the API ,
   dealing with the API ,
   how to use Axios and organizing the interface and linking the buttons .
+
+### Flavor-Table-CRUD
+
+- How many hours did it take you to complete this assignment? It take from me about 5 days
+- Were there any parts of the lab you found challenging? "The most challenging part was integrating the database
   
