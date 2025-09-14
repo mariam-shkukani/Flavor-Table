@@ -6,12 +6,31 @@ const { Pool } = require('pg');
 const axios = require('axios');
 const { log } = require('console');
 
+require('dotenv').config();
 const app = express();
+
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static('public'));
+
+// Routers
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/recipes', require('./routes/recipes'));
+
+// Start server
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, ()=> console.log(`Server running on port ${PORT}`));
+
+
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+
+const authRouter = require('./routes/auth');
+app.use('/api/auth', authRouter);
 
 // PostgreSQL connection
 const pool = new Pool({
@@ -134,4 +153,8 @@ pool.connect()
   .catch(err => {
     console.error("Could not connect to database", err);
     process.exit(1);
-  });
+ });
+//   localStorage.setItem('token', data.token);
+// axios.get('/api/users/profile',{
+//   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+// });
