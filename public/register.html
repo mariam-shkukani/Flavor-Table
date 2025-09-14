@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<h2>Register</h2>
+<form id="registerForm">
+  <input type="text" id="regUsername" placeholder="Username" required />
+  <input type="email" id="regEmail" placeholder="Email" required />
+  <input type="password" id="regPassword" placeholder="Password" required />
+  <button type="submit">Register</button>
+</form>
+
+<div id="registerMessage"></div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+  e.preventDefault(); // منع إعادة تحميل الصفحة
+
+  const username = document.getElementById('regUsername').value;
+  const email = document.getElementById('regEmail').value;
+  const password = document.getElementById('regPassword').value;
+
+  try {
+    const res = await axios.post('/api/auth/register', { username, email, password });
+    const token = res.data.token;
+
+    // حفظ التوكن في localStorage
+    localStorage.setItem('ft_token', token);
+
+    alert('تم التسجيل ✅');
+  } catch (err) {
+    alert(err.response?.data?.message || 'حدث خطأ');
+  }
+});
+</script>
+<p>Already have an account?
+  <a href="./login.html">Login here</a>
+</p>
+<script src="../routes/auth.js"></script>
+
+</body>
+</html>
