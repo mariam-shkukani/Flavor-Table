@@ -145,15 +145,16 @@ app.delete('/api/recipes/:id', async (req, res) => {
 });
 
 // Start server
-pool.connect()
-  .then(client => {
-    client.release();
-    app.listen(PORT, () => console.log(`Server listening on port http://localhost:${PORT}`));
-  })
-  .catch(err => {
-    console.error("Could not connect to database", err);
-    process.exit(1);
- });
+// pool.connect()
+//   .then(client => {
+//     client.release();
+// 
+app.listen(PORT, () => console.log(`Server listening on port http://localhost:${PORT}`));
+//   })
+//   .catch(err => {
+//     console.error("Could not connect to database", err);
+//     process.exit(1);
+//  });
 //   localStorage.setItem('token', data.token);
 // axios.get('/api/users/profile',{
 //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
